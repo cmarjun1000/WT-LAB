@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="styleForXML.css"?>
+
+<studentlist>
+	<student1>
+		<usn>1CR16CS035</usn>
+		<name>C M ARJUN</name>
+		<college>CMRIT</college>
+		<yoj>22-02-2016</yoj>
+		<branch>CSE</branch>
+		<email>cmar16cs@cmrit.ac.in</email>
+	</student1>
+	<student2>
+		<usn>1CR16CS034</usn>
+		<name>BURHAN</name>
+		<college>BMSIT</college>
+		<yoj>12-12-2016</yoj>
+		<branch>ISE</branch>
+		<email>burk@bmsit.ac.in</email>
+	</student2>
+	<student3>
+		<usn>1CR16CS036</usn>
+		<name>CHAITHRA KK</name>
+		<college>RNSIT</college>
+		<yoj>10-10-2016</yoj>
+		<branch>ECE</branch>
+		<email>bitch@rnsit.ac.in</email>
+	</student3>
+</studentlist>
