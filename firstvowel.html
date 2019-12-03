@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>First Vowel and Reverse of a number</title>
+	<script type="text/javascript">
+		function first1(){
+			var word = (document.getElementById("t1").value).toLowerCase();
+			var pos=-1;
+			for(var i=0;i<word.length;i++){
+				if(word.charAt(i)=='a' || word.charAt(i)=='e' || word.charAt(i)=='i' || word.charAt(i)=='o' || word.charAt(i)=='u'){
+					pos=i+1;
+					break;
+				}
+			}
+			document.getElementById("t2").value=pos;
+		}
+		function reverse1(){
+			var n=parseInt(document.getElementById("t3").value);
+			var rev=0,rem=0;
+			while(n!=0){
+				rem=parseInt(n%10);
+				rev=rev*10+rem;
+				n=parseInt(n/10);
+			}
+			document.getElementById("t4").value=rev;
+		}
+	</script>
+</head>
+<body>
+	<fieldset>
+		<legend>First Vowel Location</legend>
+		<center>
+		<label>Enter a word : </label><input type="text" name="" id="t1">&nbsp;&nbsp;&nbsp;<input type="button" value="Find" onclick="first1()"><br>
+		<label>Position : </label><input type="text" id="t2" name="" disabled></center>
+	</fieldset>
+
+	<fieldset>
+		<legend>Reverse of a Number</legend>
+		<center>
+		<label>Enter a Number : </label><input type="text" name="" id="t3">&nbsp;&nbsp;&nbsp;<input type="button" value="Reverse" onclick="reverse1()"><br>
+		<label>Reverse : </label><input type="text" id="t4" name="" disabled></center>
+	</fieldset>
+</body>
+</html>

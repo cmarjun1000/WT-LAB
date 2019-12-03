@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Calculator</title>
+	<style type="text/css">
+		.myname{
+			margin-left: 500px;
+			margin-bottom: 0px;
+			text-align : center;
+			
+			width: 250px;
+			padding: 20px;
+			font-size: 200%;
+			
+		}
+		.title{
+			margin-top: 10px;
+			text-align : center;
+			margin-bottom: 50px;
+			border: solid cyan 5px;
+			color : cyan;
+			width: 250px;
+			padding: 20px;
+			font-size: 200%;
+			background-color: black;
+
+		}
+		input[type="button"]{
+			background-color: CornflowerBlue;
+			color: white;
+			width: 150px;
+			height: 50px;
+			font-size: 250%;
+		}
+		
+		
+	</style>
+	<script type="text/javascript">
+		function display(x){
+			document.getElementById("textbox1").value+=x;
+		}
+		function erase(){
+			document.getElementById("textbox1").value="";
+		}
+		function solve(){
+			var a=document.getElementById("textbox1").value;
+			var ans=eval(a);
+			document.getElementById("textbox1").value=ans;
+		}
+	</script>
+</head>
+<body>
+	<center>
+		<!-- <div class="myname">C M ARJUN</div> -->
+		<div class="title">SIMPLE CALCULATOR</div>
+		
+		<input type="textbox" id="textbox1" style="width: 500px; height: 35px; font-family: HelveticaNeue-Medium, sans-serif; font-size: 225%; -webkit-transform: scale(1, 1.5); background-color: MediumSeaGreen; color: black; border: solid black 1px;">
+		<br><br/>
+		<table border="2px;" bgcolor="black">
+			<tr>
+				<td><input type="button" value="7" onclick="display(this.value)" style="font-family:serif;"></td>
+				<td><input type="button" value="8" onclick="display(this.value)" style="font-family:serif;"></td>
+				<td><input type="button" value="9" onclick="display(this.value)" style="font-family:serif;"></td>
+				<td><input type="button" value="*" onclick="display(this.value)" ></td>
+			</tr>
+			<tr>
+				<td><input type="button" value="4" onclick="display(this.value)" style="font-family:serif;"></td>
+				<td><input type="button" value="5" onclick="display(this.value)" style="font-family:serif;"></td>
+				<td><input type="button" value="6" onclick="display(this.value)" style="font-family:serif;"></td>
+				<td><input type="button" value="/" onclick="display(this.value)"></td>
+			</tr>
+			<tr>
+				<td><input type="button" value="1" onclick="display(this.value)" style="font-family:serif;"></td>
+				<td><input type="button" value="2" onclick="display(this.value)" style="font-family:serif;"></td>
+				<td><input type="button" value="3" onclick="display(this.value)" ></td>
+				<td rowspan="2"><input type="button" value="+" onclick="display(this.value)" style="height: 103px;"></td>
+			</tr>
+			<tr>
+				<td><input type="button" value="." onclick="display(this.value)"></td>		
+				<td><input type="button" value="0" onclick="display(this.value)" style="font-family:serif;"></td>
+				<td><input type="button" value="AC" onclick="erase()" style="font-family:serif;"></td>
+			</tr>
+			<tr>
+				<td colspan="3"><input type="button" value="=" onclick="solve()" style="width: 100%; "></td>
+				<td><input type="button" value="-" onclick="display(this.value)"></td>
+			</tr>
+		</table>
+	</center>
+</body>
+</html>>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Currency Convertor</title>
+	<style type="text/css">
+		input[type="button"]{
+			width: 100px;
+			height: 35px;
+			font-size: 150%;
+			padding: 0px;
+			background-color: LightSlateGrey;
+		}
+	</style>
+	<script type="text/javascript">
+		function dollar(){
+			var x=parseInt(document.getElementById("t1").value);
+			x=x*71.65;
+			document.getElementById("res").value=x;
+		}
+		function euro(){
+			var x=parseInt(document.getElementById("t1").value);
+			x=x*79.76;
+			document.getElementById("res").value=x;
+		}
+		function dirham(){
+			var x=parseInt(document.getElementById("t1").value);
+			x=x*19.52;
+			document.getElementById("res").value=x;
+		}
+	</script>
+</head>
+<body style="margin-top: 100px;">
+	<center>
+		<fieldset style="width: 600px; padding: 20px;">
+			<legend style="font-family: Courier New; font-size: 150%;"><b>CURRENCY CONVERTOR</b></legend>
+			<label>Enter the amount : </label>
+			<input type="text" id="t1" style="border: solid black 1.2px; height: 25px; font-size: 125%;"><br/><br/>
+			<label>Select Currency unit : </label>
+			<input type="button" value="$" onclick="dollar()">&nbsp;
+			<input type="button" value="&euro;" onclick="euro()">&nbsp;
+			<input type="button" value="AED" onclick="dirham()">&nbsp;<br/><br/>
+			<label>Value in <b>₹</b> : </label>
+			<input type="text" id="res" style="border: solid black 1.2px; height: 25px; font-size: 125%;">
+		</fieldset>
+	</center>
+</body>
+</html>

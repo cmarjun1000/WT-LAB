@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Text Size Variation</title>
+
+</head>
+<body>
+	<p id="para"></p>
+	<script type="text/javascript">
+		var disp=document.getElementById("para");
+		var a2;
+		var fs=5;
+		var a1=setInterval(increment,100);
+		function increment(){
+			disp.innerHTML="TEXT GROWING";
+			disp.setAttribute("style","font-size:"+fs+"pt;color:red");
+			fs+=5;
+			if(fs==50){
+				clearInterval(a1);
+				a2=setInterval(decrement,100);
+			}
+		}
+		function decrement(){
+			disp.innerHTML="TEXT SHRINKING";
+			disp.setAttribute("style","font-size:"+fs+"pt;color:blue");
+			fs-=5;
+			if(fs==5){
+				clearInterval(a2);
+				a1=setInterval(increment,100);
+			}
+		}
+	</script>
+</body>
+</html>
